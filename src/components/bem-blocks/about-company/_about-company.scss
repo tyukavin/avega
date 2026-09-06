@@ -1,0 +1,222 @@
+.about-company {
+    width: min(100%, var(--layout-max));
+    padding: 0 1rem;
+    margin: 4rem auto 0;
+
+    &__title {
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.64fr) minmax(0, 1fr);
+        gap: 1rem 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    &__card,
+    &__media {
+        min-width: 0;
+        overflow: clip;
+        border-radius: var(--radius-large);
+    }
+
+    &__card {
+        padding: 1rem;
+        background-color: var(--color-surface);
+    }
+
+    &__card--expertise,
+    &__card--team,
+    &__card--values {
+        grid-column: 1 / -1;
+    }
+
+    &__card--team {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 14.125rem;
+        color: #fff;
+        background-color: var(--color-dark-surface);
+    }
+
+    &__card--team &__description {
+        color: var(--color-muted-light);
+    }
+
+    &__card-title {
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    &__description {
+        margin-top: 0.75rem;
+        font-size: 0.875rem;
+        line-height: 1.2857;
+        letter-spacing: -0.02em;
+        color: var(--color-muted);
+    }
+
+    &__team-image {
+        width: min(100%, 16.25rem);
+        height: auto;
+        margin-top: 0.75rem;
+    }
+
+    &__media {
+        display: block;
+        min-height: 8.25rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__media--identity &__image {
+        object-position: bottom;
+    }
+
+    &__card--values {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 17.1875rem;
+        color: var(--color-accent-muted);
+        background-color: var(--color-accent);
+    }
+
+    &__values-text {
+        font-size: 1rem;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+    }
+
+    &__values-text strong {
+        font-weight: 400;
+        color: #fff;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25rem;
+        width: 100%;
+        min-height: 2.75rem;
+        padding: 0.625rem 1rem;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #fff;
+        border: 0.0625rem solid #fff;
+        border-radius: 0.5rem;
+        transition:
+            color 220ms ease,
+            background-color 220ms ease,
+            transform 220ms var(--ease-out);
+
+        &:hover {
+            color: var(--color-accent);
+            background-color: #fff;
+            transform: translateY(-0.125rem);
+        }
+
+        &:focus-visible {
+            outline: 0.1875rem solid var(--color-mark);
+            outline-offset: 0.1875rem;
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    &__link:hover &__link-icon {
+        filter: brightness(0) saturate(100%) invert(17%) sepia(18%)
+            saturate(3164%) hue-rotate(276deg) brightness(91%) contrast(92%);
+    }
+
+    &__link-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        transition: filter 220ms ease;
+    }
+}
+
+@media (width >= 48rem) {
+    .about-company {
+        padding: 0 var(--page-gutter);
+        margin-top: 8.75rem;
+
+        &__title {
+            font-size: clamp(2.25rem, 3.35vw, 3rem);
+            line-height: 1.15;
+        }
+
+        &__grid {
+            grid-template-columns: 505fr 295fr 400fr;
+            gap: 1.25rem;
+            margin-top: 2.75rem;
+        }
+
+        &__card {
+            padding: 1.75rem 2rem;
+        }
+
+        &__card--expertise {
+            grid-column: 1;
+            min-height: 16rem;
+        }
+
+        &__card--team {
+            grid-column: 2 / 4;
+            min-height: 16rem;
+        }
+
+        &__card-title {
+            font-size: 1.5rem;
+            line-height: 1.15;
+        }
+
+        &__description {
+            font-size: 1rem;
+            line-height: 1.25;
+        }
+
+        &__team-image {
+            width: min(100%, 32.4375rem);
+        }
+
+        &__media {
+            min-height: 19.0625rem;
+        }
+
+        &__card--values {
+            grid-column: auto;
+            min-height: 19.0625rem;
+            padding: 1.75rem;
+        }
+
+        &__link {
+            width: fit-content;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-company {
+        &__link,
+        &__link-icon {
+            transition: none;
+        }
+    }
+}
