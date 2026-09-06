@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+.tmp/
+.env
+.DS_Store
+process.json
+
+build/*
+!build/.gitkeep

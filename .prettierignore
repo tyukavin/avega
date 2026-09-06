@@ -1,0 +1,6 @@
+build/
+.cache/
+node_modules/
+package-lock.json
+src/scss/base/_01_normalize.scss
+src/**/*.html
