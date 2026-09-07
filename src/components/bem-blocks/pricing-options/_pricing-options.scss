@@ -1,0 +1,95 @@
+.pricing-options {
+    width: min(100%, var(--layout-max));
+    padding: 0 var(--page-gutter);
+    margin: 4rem auto 0;
+
+    &__header {
+        display: grid;
+        gap: 1rem;
+    }
+
+    &__title {
+        font-size: 1.75rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+    }
+
+    &__header p {
+        max-width: 32rem;
+        color: var(--color-muted);
+    }
+
+    &__list {
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        min-height: 17rem;
+        padding: 1.5rem;
+        background: var(--color-surface);
+        border-radius: var(--radius-large);
+    }
+
+    &__card h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    &__card p {
+        margin-top: 1rem;
+        color: var(--color-muted);
+    }
+
+    &__card strong {
+        margin-top: auto;
+        font-size: 0.9375rem;
+        font-weight: 500;
+    }
+
+    &__card--dark,
+    &__card--accent {
+        color: #fff;
+
+        p {
+            color: rgb(255 255 255 / 65%);
+        }
+    }
+
+    &__card--dark {
+        background: var(--color-dark-surface);
+    }
+
+    &__card--accent {
+        background: var(--color-accent);
+    }
+}
+
+@media (width >= 48rem) {
+    .pricing-options {
+        margin-top: 8.75rem;
+
+        &__header {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__title {
+            font-size: clamp(2.25rem, 3.35vw, 3rem);
+        }
+
+        &__list {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-top: 2.5rem;
+        }
+
+        &__card {
+            min-height: 22rem;
+            padding: 2rem;
+        }
+    }
+}

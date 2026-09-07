@@ -1,0 +1,91 @@
+.work-results {
+    width: min(100%, var(--layout-max));
+    padding: 0 var(--page-gutter);
+    margin: 4rem auto 0;
+
+    &__title {
+        font-size: 1.75rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+    }
+
+    &__grid {
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    &__card {
+        position: relative;
+        min-height: 10rem;
+        padding: 1.25rem;
+        overflow: hidden;
+        background: var(--color-surface);
+        border-radius: var(--radius-large);
+    }
+
+    &__value {
+        display: block;
+        max-width: 15rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    &__card p {
+        max-width: 24rem;
+        margin-top: 2rem;
+        font-size: 0.875rem;
+        color: var(--color-muted);
+    }
+
+    &__card--accent {
+        color: #fff;
+        background: var(--color-accent);
+
+        p {
+            color: rgb(255 255 255 / 68%);
+        }
+    }
+
+    &__card--steps::after,
+    &__card--percent::after {
+        position: absolute;
+        right: 1rem;
+        bottom: -1rem;
+        font-size: 6rem;
+        font-weight: 500;
+        line-height: 1;
+        color: var(--color-accent-soft);
+        content: "↗";
+    }
+
+    &__card--percent::after {
+        content: "%";
+    }
+}
+
+@media (width >= 48rem) {
+    .work-results {
+        margin-top: 8.75rem;
+
+        &__title {
+            font-size: clamp(2.25rem, 3.35vw, 3rem);
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin-top: 2.5rem;
+        }
+
+        &__card {
+            min-height: 13rem;
+            padding: 1.75rem;
+        }
+
+        &__value {
+            font-size: 1.5rem;
+        }
+    }
+}

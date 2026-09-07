@@ -1,0 +1,129 @@
+.consultation-form {
+    display: grid;
+    width: min(calc(100% - 2rem), 1280px);
+    padding: 1.5rem;
+    margin: 4rem auto 0;
+    color: #fff;
+    background: var(--color-accent);
+    border-radius: var(--radius-large);
+
+    &__intro,
+    &__form {
+        min-width: 0;
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 1.75rem;
+        font-weight: 500;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+    }
+
+    &__contacts {
+        display: grid;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    &__phone {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    &__messenger {
+        width: fit-content;
+        font-size: 0.875rem;
+        color: var(--color-accent-muted);
+        border-bottom: 1px solid currentcolor;
+    }
+
+    &__form {
+        display: grid;
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    &__field input,
+    &__field textarea {
+        width: 100%;
+        padding: 0.875rem 0;
+        color: #fff;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid rgb(255 255 255 / 35%);
+        border-radius: 0;
+        outline: 0;
+        resize: vertical;
+
+        &::placeholder {
+            color: rgb(255 255 255 / 70%);
+        }
+
+        &:focus {
+            border-color: var(--color-mark);
+        }
+    }
+
+    &__agreement {
+        display: flex;
+        gap: 0.625rem;
+        align-items: flex-start;
+        font-size: 0.75rem;
+        color: rgb(255 255 255 / 65%);
+
+        input {
+            flex: 0 0 auto;
+            margin-top: 0.125rem;
+            accent-color: var(--color-mark);
+        }
+    }
+
+    &__submit {
+        min-height: 3rem;
+        padding: 0.75rem 1.5rem;
+        color: var(--color-accent);
+        cursor: pointer;
+        background: #fff;
+        border: 0;
+        border-radius: 0.375rem;
+    }
+}
+
+@media (width >= 48rem) {
+    .consultation-form {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        min-height: 28rem;
+        padding: 3.5rem 4rem;
+        margin-top: 8.75rem;
+
+        &__title {
+            font-size: clamp(2.25rem, 3.35vw, 3rem);
+        }
+
+        &__contacts {
+            margin-top: auto;
+        }
+
+        &__form {
+            grid-template-columns: 1fr 1fr;
+            align-content: center;
+            margin-top: 0;
+        }
+
+        &__field--wide,
+        &__agreement,
+        &__submit {
+            grid-column: 1 / -1;
+        }
+
+        &__submit {
+            width: 100%;
+        }
+    }
+}
