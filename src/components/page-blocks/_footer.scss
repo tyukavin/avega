@@ -85,6 +85,10 @@
         }
     }
 
+    &__menu-link {
+        font-weight: 500;
+    }
+
     &__contacts {
         display: flex;
         flex-direction: column;

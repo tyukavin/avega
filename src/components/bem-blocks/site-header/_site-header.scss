@@ -87,7 +87,7 @@
 
     &__phone {
         font-size: 1rem;
-        font-weight: 600;
+        font-weight: 500;
         white-space: nowrap;
 
         &:focus-visible {
@@ -211,7 +211,7 @@
         &__contact-link {
             min-height: 1.75rem;
             font-size: 0.9375rem;
-            font-weight: 600;
+            font-weight: 500;
 
             &:focus-visible {
                 outline: 0.1875rem solid var(--color-mark);
