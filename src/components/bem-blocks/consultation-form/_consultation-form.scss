@@ -1,129 +1,280 @@
 .consultation-form {
-    display: grid;
-    width: min(calc(100% - 2rem), 1280px);
-    padding: 1.5rem;
+    width: min(calc(100% - 2rem), 71.5rem);
+    padding: 1.25rem 1rem;
     margin: 4rem auto 0;
     color: #fff;
-    background: var(--color-accent);
+    background-color: var(--color-accent);
     border-radius: var(--radius-large);
 
-    &__intro,
-    &__form {
-        min-width: 0;
+    &__title {
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
     }
 
-    &__intro {
+    &__body {
         display: flex;
         flex-direction: column;
+        margin-top: 1.5rem;
     }
 
-    &__title {
-        font-size: 1.75rem;
-        font-weight: 500;
-        line-height: 1.05;
-        letter-spacing: -0.03em;
+    &__fields {
+        display: grid;
+        gap: 1.25rem;
     }
 
-    &__contacts {
+    &__field {
         display: grid;
         gap: 0.5rem;
-        margin-top: 2rem;
     }
 
-    &__phone {
-        font-size: 1.125rem;
-        font-weight: 500;
-    }
-
-    &__messenger {
-        width: fit-content;
-        font-size: 0.875rem;
+    &__label {
+        font-size: 0.9375rem;
+        line-height: 1.333;
         color: var(--color-accent-muted);
-        border-bottom: 1px solid currentcolor;
     }
 
-    &__form {
-        display: grid;
-        gap: 1rem;
-        margin-top: 2.5rem;
-    }
-
-    &__field input,
-    &__field textarea {
+    &__input {
         width: 100%;
-        padding: 0.875rem 0;
+        min-height: 2.75rem;
+        padding: 0.75rem 1rem;
         color: #fff;
-        background: transparent;
+        background-color: #6d3659;
         border: 0;
-        border-bottom: 1px solid rgb(255 255 255 / 35%);
-        border-radius: 0;
-        outline: 0;
+        border-radius: 0.5rem;
         resize: vertical;
 
         &::placeholder {
-            color: rgb(255 255 255 / 70%);
+            color: #fff;
         }
 
-        &:focus {
-            border-color: var(--color-mark);
+        &:focus-visible {
+            outline: 0.125rem solid var(--color-mark);
+            outline-offset: 0.125rem;
         }
+
+        &--area {
+            min-height: 6.25rem;
+        }
+    }
+
+    &__consents {
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 2.25rem;
     }
 
     &__agreement {
         display: flex;
-        gap: 0.625rem;
         align-items: flex-start;
-        font-size: 0.75rem;
-        color: rgb(255 255 255 / 65%);
+        gap: 0.5rem;
+        cursor: pointer;
+    }
 
-        input {
-            flex: 0 0 auto;
-            margin-top: 0.125rem;
-            accent-color: var(--color-mark);
+    &__checkbox {
+        flex-shrink: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-top: 0.125rem;
+        appearance: none;
+        background-color: transparent;
+        border: 0.0625rem solid #fff;
+        border-radius: 0.25rem;
+        cursor: pointer;
+
+        &:checked {
+            background-color: #fff;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M5 10.5l3.5 3.5L15 7' fill='none' stroke='%23571f42' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+        }
+
+        &:focus-visible {
+            outline: 0.125rem solid var(--color-mark);
+            outline-offset: 0.125rem;
         }
     }
 
+    &__agreement-text {
+        font-size: 0.75rem;
+        line-height: 1.15;
+        color: var(--color-accent-muted);
+    }
+
+    &__agreement-text a {
+        color: #fff;
+    }
+
     &__submit {
-        min-height: 3rem;
-        padding: 0.75rem 1.5rem;
-        color: var(--color-accent);
+        width: 100%;
+        min-height: 2.75rem;
+        margin-top: 1.25rem;
+        padding: 0.625rem 1rem;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        color: var(--color-text);
         cursor: pointer;
-        background: #fff;
+        background-color: #fff;
         border: 0;
-        border-radius: 0.375rem;
+        border-radius: 0.5rem;
+        transition:
+            background-color 220ms ease,
+            transform 220ms var(--ease-out);
+
+        &:hover {
+            background-color: #ead9e4;
+            transform: translateY(-0.125rem);
+        }
+
+        &:focus-visible {
+            outline: 0.1875rem solid var(--color-mark);
+            outline-offset: 0.125rem;
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    &__contacts {
+        display: grid;
+        justify-items: start;
+        gap: 1rem;
+        margin-top: 2.25rem;
+    }
+
+    &__contacts-text {
+        font-size: 0.9375rem;
+        line-height: 1.333;
+        color: var(--color-accent-muted);
+    }
+
+    &__phone {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    &__telegram {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-height: 2.75rem;
+        padding: 0.625rem 1rem;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        color: #fff;
+        border: 0.0625rem solid #fff;
+        border-radius: 0.5rem;
+        transition:
+            background-color 220ms ease,
+            transform 220ms var(--ease-out);
+
+        &:hover {
+            background-color: #6d3659;
+            transform: translateY(-0.125rem);
+        }
+
+        &:focus-visible {
+            outline: 0.1875rem solid var(--color-mark);
+            outline-offset: 0.125rem;
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    &__telegram-icon {
+        width: 1.25rem;
+        height: 1.0625rem;
+        filter: brightness(0) invert(1);
     }
 }
 
 @media (width >= 48rem) {
     .consultation-form {
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-        min-height: 28rem;
-        padding: 3.5rem 4rem;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 5rem;
+        align-items: start;
+        padding: 3.375rem 4rem;
         margin-top: 8.75rem;
+        border-radius: 1.25rem;
 
         &__title {
             font-size: clamp(2.25rem, 3.35vw, 3rem);
         }
 
-        &__contacts {
-            margin-top: auto;
-        }
-
-        &__form {
-            grid-template-columns: 1fr 1fr;
-            align-content: center;
+        &__body {
             margin-top: 0;
         }
 
-        &__field--wide,
-        &__agreement,
-        &__submit {
-            grid-column: 1 / -1;
+        &__label {
+            font-size: 1.25rem;
+        }
+
+        &__input {
+            min-height: 3.25rem;
+            padding: 0.75rem 1rem;
+        }
+
+        &__consents {
+            gap: 0.5rem;
+            margin-top: 2.75rem;
+        }
+
+        &__checkbox {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        &__agreement-text {
+            font-size: 1rem;
         }
 
         &__submit {
-            width: 100%;
+            min-height: 3.75rem;
+            margin-top: 1.25rem;
+            padding: 0.75rem 1rem;
+            font-size: 1.25rem;
+        }
+
+        &__contacts {
+            gap: 1.5rem;
+            margin-top: 2.75rem;
+        }
+
+        &__contacts-text {
+            font-size: 1.25rem;
+            line-height: 1.2;
+        }
+
+        &__phone {
+            font-size: 2rem;
+        }
+
+        &__telegram {
+            min-height: 3.75rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        &__telegram-icon {
+            width: 1.75rem;
+            height: 1.5rem;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .consultation-form {
+        &__submit,
+        &__telegram {
+            transition: none;
         }
     }
 }
