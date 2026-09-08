@@ -1,13 +1,10 @@
+@use "../../../scss/base/mixins";
+
 .contact-office {
-    width: min(100%, var(--layout-max));
-    padding: 0 var(--page-gutter);
-    margin: 4rem auto 0;
+    @include mixins.section;
 
     &__title {
-        font-size: 1.375rem;
-        font-weight: 500;
-        line-height: 1.1;
-        letter-spacing: -0.03em;
+        @include mixins.section-title;
     }
 
     &__layout {
@@ -239,12 +236,7 @@
 
 @media (width >= 48rem) {
     .contact-office {
-        margin-top: 8.75rem;
         margin-bottom: 8.75rem;
-
-        &__title {
-            font-size: clamp(2.25rem, 3.35vw, 3rem);
-        }
 
         &__layout {
             grid-template-columns: minmax(20rem, 32.8125rem) minmax(0, 1fr);

@@ -1,7 +1,7 @@
+@use "../../../scss/base/mixins";
+
 .pricing-options {
-    width: min(100%, var(--layout-max));
-    padding: 0 var(--page-gutter);
-    margin: 4rem auto 0;
+    @include mixins.section;
 
     &__header {
         display: grid;
@@ -9,9 +9,7 @@
     }
 
     &__title {
-        font-size: 1.375rem;
-        font-weight: 500;
-        line-height: 1.1;
+        @include mixins.section-title;
     }
 
     &__lead {
@@ -74,18 +72,9 @@
 
 @media (width >= 48rem) {
     .pricing-options {
-        padding-right: clamp(2.5rem, 6.944vw, 6.25rem);
-        padding-left: clamp(2.5rem, 6.944vw, 6.25rem);
-        margin-top: 8.75rem;
-
         &__header {
             grid-template-columns: minmax(0, 38.75rem) minmax(20rem, 25rem);
             justify-content: space-between;
-        }
-
-        &__title {
-            font-size: 3rem;
-            line-height: 1.15;
         }
 
         &__list {

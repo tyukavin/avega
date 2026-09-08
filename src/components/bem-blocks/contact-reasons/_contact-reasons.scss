@@ -1,13 +1,10 @@
+@use "../../../scss/base/mixins";
+
 .contact-reasons {
-    width: min(100%, var(--layout-max));
-    padding: 0 1rem;
-    margin: 4rem auto 0;
+    @include mixins.section;
 
     &__title {
-        font-size: 1.375rem;
-        font-weight: 500;
-        line-height: 1.1;
-        letter-spacing: -0.02em;
+        @include mixins.section-title;
     }
 
     &__list {
@@ -110,14 +107,6 @@
 
 @media (width >= 48rem) {
     .contact-reasons {
-        padding: 0 var(--page-gutter);
-        margin-top: 8.75rem;
-
-        &__title {
-            font-size: clamp(2.25rem, 3.35vw, 3rem);
-            line-height: 1.15;
-        }
-
         &__list {
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 1.25rem;

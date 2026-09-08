@@ -59,3 +59,25 @@
     padding: 0 $padding;
     margin: 0 auto;
 }
+
+@mixin section {
+    width: min(100%, var(--layout-max));
+    padding: 0 var(--page-gutter);
+    margin: 4rem auto 0;
+
+    @media (width >= 48rem) {
+        margin-top: 8.75rem;
+    }
+}
+
+@mixin section-title {
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+
+    @media (width >= 48rem) {
+        font-size: clamp(2.25rem, 3.35vw, 3rem);
+        line-height: 1.15;
+    }
+}

@@ -1,13 +1,10 @@
+@use "../../../scss/base/mixins";
+
 .faq {
-    width: min(100%, var(--layout-max));
-    padding: 0 var(--page-gutter);
-    margin: 4rem auto 0;
+    @include mixins.section;
 
     &__title {
-        font-size: 1.75rem;
-        font-weight: 500;
-        line-height: 1.1;
-        letter-spacing: -0.03em;
+        @include mixins.section-title;
     }
 
     &__list {
@@ -61,12 +58,6 @@
 
 @media (width >= 48rem) {
     .faq {
-        margin-top: 8.75rem;
-
-        &__title {
-            font-size: clamp(2.25rem, 3.35vw, 3rem);
-        }
-
         &__list {
             margin-top: 2.5rem;
         }
