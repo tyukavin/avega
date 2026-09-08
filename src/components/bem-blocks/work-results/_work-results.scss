@@ -53,16 +53,17 @@
     &__mark {
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: 1.25rem;
         pointer-events: none;
 
         &--check {
-            width: 9rem;
+            right: -4rem;
+            width: 12rem;
             height: auto;
         }
 
         &--scheme {
-            width: 5rem;
+            width: 6rem;
             height: auto;
         }
     }
@@ -129,11 +130,13 @@
 
         &__mark {
             &--check {
-                width: 15rem;
+                right: -10rem;
+                width: 24rem;
             }
 
             &--scheme {
-                width: 7rem;
+                right: -1rem;
+                width: 11rem;
             }
         }
     }

@@ -14,7 +14,7 @@
 
     &__lead {
         max-width: 32rem;
-        font-size: 0.875rem;
+        font-size: 1rem;
         line-height: 1.25;
         color: var(--color-muted);
     }
@@ -36,9 +36,9 @@
 
     &__card-title,
     &__price {
-        font-size: 1.375rem;
+        font-size: 1.25rem;
         font-weight: 500;
-        line-height: 1.04;
+        line-height: 1.1;
     }
 
     &__description {

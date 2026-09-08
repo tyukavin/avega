@@ -1,4 +1,6 @@
-<section class="experts-team" aria-labelledby="experts-team-title">
+<section class="experts-team"
+    data-team-slider
+    aria-labelledby="experts-team-title">
     <div class="experts-team__header">
         <h2 class="experts-team__title" id="experts-team-title">
             Эксперты на вашей стороне
@@ -11,7 +13,22 @@
         </p>
     </div>
 
-    <ul class="experts-team__list">
+    <div class="experts-team__controls">
+        <button class="experts-team__arrow experts-team__arrow--prev"
+            type="button"
+            data-team-prev
+            aria-label="Предыдущие эксперты">
+            <img src="img/icon-chevron.svg" width="24" height="24" alt="">
+        </button>
+        <button class="experts-team__arrow experts-team__arrow--next"
+            type="button"
+            data-team-next
+            aria-label="Следующие эксперты">
+            <img src="img/icon-chevron.svg" width="24" height="24" alt="">
+        </button>
+    </div>
+
+    <ul class="experts-team__list" data-team-list>
         <li class="experts-team__item">
             <article class="experts-team__card">
                 <img class="experts-team__image"
