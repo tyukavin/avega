@@ -1,86 +1,84 @@
 <section class="consultation-form" id="consultation" aria-labelledby="consultation-title">
     <h2 class="consultation-form__title" id="consultation-title">Опишите ситуацию — и мы вам поможем</h2>
 
-    <div class="consultation-form__body">
-        <form class="consultation-form__form" action="#" method="post">
-            <div class="consultation-form__fields">
-                <div class="consultation-form__field">
-                    <label class="consultation-form__label" for="consultation-name">Имя*</label>
-                    <input class="consultation-form__input"
-                        type="text"
-                        id="consultation-name"
-                        name="name"
-                        autocomplete="name"
-                        required>
-                </div>
-                <div class="consultation-form__field">
-                    <label class="consultation-form__label" for="consultation-phone">Номер телефона*</label>
-                    <input class="consultation-form__input"
-                        type="tel"
-                        id="consultation-phone"
-                        name="phone"
-                        autocomplete="tel"
-                        inputmode="tel"
-                        required>
-                </div>
-                <div class="consultation-form__field">
-                    <label class="consultation-form__label" for="consultation-email">Электронная почта</label>
-                    <input class="consultation-form__input"
-                        type="email"
-                        id="consultation-email"
-                        name="email"
-                        autocomplete="email">
-                </div>
-                <div class="consultation-form__field">
-                    <label class="consultation-form__label" for="consultation-message">Вопрос*</label>
-                    <textarea class="consultation-form__input consultation-form__input--area"
-                        id="consultation-message"
-                        name="message"
-                        rows="3"
-                        placeholder="Опишите вашу ситуацию"
-                        required></textarea>
-                </div>
+    <form class="consultation-form__form" action="#" method="post">
+        <div class="consultation-form__fields">
+            <div class="consultation-form__field">
+                <label class="consultation-form__label" for="consultation-name">Имя*</label>
+                <input class="consultation-form__input"
+                    type="text"
+                    id="consultation-name"
+                    name="name"
+                    autocomplete="name"
+                    required>
             </div>
-
-            <div class="consultation-form__consents">
-                <label class="consultation-form__agreement">
-                    <input class="consultation-form__checkbox" type="checkbox" name="consent" required>
-                    <span class="consultation-form__agreement-text">
-                        Я даю согласие на
-                        <a href="/personal-data-consent/">обработку персональных данных</a>*
-                    </span>
-                </label>
-                <label class="consultation-form__agreement">
-                    <input class="consultation-form__checkbox" type="checkbox" name="privacy" required>
-                    <span class="consultation-form__agreement-text">
-                        Я ознакомился и согласен с
-                        <a href="/privacy-policy/">политикой конфиденциальности</a>*
-                    </span>
-                </label>
-                <label class="consultation-form__agreement">
-                    <input class="consultation-form__checkbox" type="checkbox" name="newsletter">
-                    <span class="consultation-form__agreement-text">
-                        Я согласен получать рекламную рассылку
-                    </span>
-                </label>
+            <div class="consultation-form__field">
+                <label class="consultation-form__label" for="consultation-phone">Номер телефона*</label>
+                <input class="consultation-form__input"
+                    type="tel"
+                    id="consultation-phone"
+                    name="phone"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    required>
             </div>
-
-            <button class="consultation-form__submit" type="submit">Получить консультацию</button>
-        </form>
-
-        <div class="consultation-form__contacts">
-            <p class="consultation-form__contacts-text">
-                Не хотите ждать звонка? Позвоните по этому номеру или напишите нам в Telegram
-            </p>
-            <a class="consultation-form__phone" href="tel:+79128352345">+7&nbsp;(912)&nbsp;835&#8209;23&#8209;45</a>
-            <a class="consultation-form__telegram" href="https://t.me/avega45">
-                <img class="consultation-form__telegram-icon"
-                    src="img/icon-telegram.svg"
-                    width="28"
-                    height="24"
-                    alt="">
-                Задать вопрос
-            </a>
+            <div class="consultation-form__field">
+                <label class="consultation-form__label" for="consultation-email">Электронная почта</label>
+                <input class="consultation-form__input"
+                    type="email"
+                    id="consultation-email"
+                    name="email"
+                    autocomplete="email">
+            </div>
+            <div class="consultation-form__field">
+                <label class="consultation-form__label" for="consultation-message">Вопрос*</label>
+                <textarea class="consultation-form__input consultation-form__input--area"
+                    id="consultation-message"
+                    name="message"
+                    rows="3"
+                    placeholder="Опишите вашу ситуацию"
+                    required></textarea>
+            </div>
         </div>
+
+        <div class="consultation-form__consents">
+            <label class="consultation-form__agreement">
+                <input class="consultation-form__checkbox" type="checkbox" name="consent" required>
+                <span class="consultation-form__agreement-text">
+                    Я даю согласие на
+                    <a href="/personal-data-consent/">обработку персональных данных</a>*
+                </span>
+            </label>
+            <label class="consultation-form__agreement">
+                <input class="consultation-form__checkbox" type="checkbox" name="privacy" required>
+                <span class="consultation-form__agreement-text">
+                    Я ознакомился и согласен с
+                    <a href="/privacy-policy/">политикой конфиденциальности</a>*
+                </span>
+            </label>
+            <label class="consultation-form__agreement">
+                <input class="consultation-form__checkbox" type="checkbox" name="newsletter">
+                <span class="consultation-form__agreement-text">
+                    Я согласен получать рекламную рассылку
+                </span>
+            </label>
+        </div>
+
+        <button class="consultation-form__submit" type="submit">Получить консультацию</button>
+    </form>
+
+    <div class="consultation-form__contacts">
+        <p class="consultation-form__contacts-text">
+            Не хотите ждать звонка? Позвоните по этому номеру или напишите нам в Telegram
+        </p>
+        <a class="consultation-form__phone" href="tel:+79128352345">+7&nbsp;(912)&nbsp;835&#8209;23&#8209;45</a>
+        <a class="consultation-form__telegram" href="https://t.me/avega45">
+            <img class="consultation-form__telegram-icon"
+                src="img/icon-telegram.svg"
+                width="28"
+                height="24"
+                alt="">
+            Задать вопрос
+        </a>
     </div>
 </section>

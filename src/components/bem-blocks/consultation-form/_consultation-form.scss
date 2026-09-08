@@ -13,9 +13,8 @@
         letter-spacing: -0.02em;
     }
 
-    &__body {
-        display: flex;
-        flex-direction: column;
+    &__form {
+        display: grid;
         margin-top: 1.5rem;
     }
 
@@ -198,19 +197,29 @@
 @media (width >= 48rem) {
     .consultation-form {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        column-gap: 5rem;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+        grid-template-rows: auto 1fr;
+        column-gap: 4rem;
         align-items: start;
         padding: 3.375rem 4rem;
         margin-top: 8.75rem;
         border-radius: 1.25rem;
 
         &__title {
+            grid-column: 1;
+            grid-row: 1;
             font-size: clamp(2.25rem, 3.35vw, 3rem);
         }
 
-        &__body {
+        &__form {
+            grid-column: 2;
+            grid-row: 1 / span 2;
             margin-top: 0;
+        }
+
+        &__consents {
+            gap: 0.5rem;
+            margin-top: 2.75rem;
         }
 
         &__label {
@@ -220,11 +229,6 @@
         &__input {
             min-height: 3.25rem;
             padding: 0.75rem 1rem;
-        }
-
-        &__consents {
-            gap: 0.5rem;
-            margin-top: 2.75rem;
         }
 
         &__checkbox {
@@ -238,14 +242,16 @@
 
         &__submit {
             min-height: 3.75rem;
-            margin-top: 1.25rem;
             padding: 0.75rem 1rem;
             font-size: 1.25rem;
         }
 
         &__contacts {
+            grid-column: 1;
+            grid-row: 2;
+            align-self: end;
             gap: 1.5rem;
-            margin-top: 2.75rem;
+            margin-top: 0;
         }
 
         &__contacts-text {
