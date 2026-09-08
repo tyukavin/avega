@@ -1,16 +1,132 @@
 <section class="contact-office" id="office" aria-labelledby="contact-office-title">
     <h2 class="contact-office__title" id="contact-office-title">Связаться с нами</h2>
+
     <div class="contact-office__layout">
-        <div class="contact-office__details">
-            <a class="contact-office__phone" href="tel:+79128352345">+7&nbsp;(912)&nbsp;835&#8209;23&#8209;45</a>
-            <a class="contact-office__email" href="mailto:avega45@rambler.ru">avega45@rambler.ru</a>
-            <address class="contact-office__address">г. Курган, ул. Коли Мяготина, 124А, офис 313</address>
+        <div class="contact-office__contacts">
+            <div class="contact-office__offices">
+                <div class="contact-office__office">
+                    <h3 class="contact-office__city">г. Курган</h3>
+                    <a class="contact-office__phone" href="tel:+79128352345">
+                        +7&nbsp;(912)&nbsp;835&#8209;23&#8209;45
+                    </a>
+                    <a class="contact-office__email" href="mailto:avega45@rambler.ru">
+                        avega45@rambler.ru
+                    </a>
+                </div>
+                <div class="contact-office__office">
+                    <h3 class="contact-office__city">г. Екатеринбург</h3>
+                    <a class="contact-office__phone" href="tel:+79128352345">
+                        +7&nbsp;(912)&nbsp;835&#8209;23&#8209;45
+                    </a>
+                    <a class="contact-office__email" href="mailto:avegalawyers96@gmail.com">
+                        avegalawyers96@gmail.com
+                    </a>
+                </div>
+            </div>
+
             <ul class="contact-office__socials" aria-label="Социальные сети">
-                <li><a href="#" aria-label="Telegram"><img src="img/social-telegram.svg" width="24" height="24" alt=""></a></li>
-                <li><a href="#" aria-label="ВКонтакте"><img src="img/social-vk.svg" width="24" height="24" alt=""></a></li>
-                <li><a href="#" aria-label="Дзен"><img src="img/social-dzen.svg" width="24" height="24" alt=""></a></li>
+                <li class="contact-office__socials-item">
+                    <a class="contact-office__social contact-office__social--telegram"
+                        href="https://t.me/avega45">
+                        <img class="contact-office__social-icon"
+                            src="img/icon-telegram.svg"
+                            width="33"
+                            height="28"
+                            alt="">
+                        <span class="contact-office__social-copy">
+                            <span class="contact-office__social-hint">Перейти в</span>
+                            <span class="contact-office__social-name">Telegram-канал</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="contact-office__socials-item">
+                    <a class="contact-office__social contact-office__social--icon"
+                        href="#"
+                        aria-label="ВКонтакте">
+                        <img class="contact-office__social-icon"
+                            src="img/icon-vk.svg"
+                            width="39"
+                            height="24"
+                            alt="">
+                    </a>
+                </li>
+                <li class="contact-office__socials-item">
+                    <a class="contact-office__social contact-office__social--icon"
+                        href="#"
+                        aria-label="Max">
+                        <img class="contact-office__social-icon"
+                            src="img/icon-max.svg"
+                            width="32"
+                            height="32"
+                            alt="">
+                    </a>
+                </li>
             </ul>
         </div>
-        <iframe class="contact-office__map" title="Офис компании «Авега» на карте" src="https://www.openstreetmap.org/export/embed.html?bbox=65.3328%2C55.4382%2C65.3528%2C55.4482&amp;layer=mapnik&amp;marker=55.4432%2C65.3428" loading="lazy"></iframe>
+
+        <div class="contact-office__map">
+            <picture class="contact-office__map-media">
+                <source srcset="img/contact-map.avif" type="image/avif">
+                <source srcset="img/contact-map.webp" type="image/webp">
+                <img class="contact-office__map-image"
+                    src="img/contact-map.png"
+                    width="715"
+                    height="367"
+                    alt="Карта расположения офиса «Авега» в Кургане"
+                    loading="lazy">
+            </picture>
+
+            <div class="contact-office__map-card">
+                <p class="contact-office__map-title">Авега, г. Курган</p>
+
+                <p class="contact-office__map-row">
+                    <img class="contact-office__map-icon"
+                        src="img/icon-location.svg"
+                        width="20"
+                        height="20"
+                        alt="">
+                    <span class="contact-office__map-address">улица Коли Мяготина, 124А</span>
+                </p>
+
+                <div class="contact-office__map-row contact-office__map-row--hours">
+                    <img class="contact-office__map-icon"
+                        src="img/icon-clock.svg"
+                        width="20"
+                        height="20"
+                        alt="">
+                    <dl class="contact-office__hours">
+                        <div class="contact-office__hours-row">
+                            <dt class="contact-office__hours-day">Пн-Чт</dt>
+                            <dd class="contact-office__hours-value">
+                                8:30-17:30
+                                <span class="contact-office__hours-break">(перерыв 12:00-13:00)</span>
+                            </dd>
+                        </div>
+                        <div class="contact-office__hours-row">
+                            <dt class="contact-office__hours-day">Пт</dt>
+                            <dd class="contact-office__hours-value">
+                                8:30-16:30
+                                <span class="contact-office__hours-break">(перерыв 12:00-13:00)</span>
+                            </dd>
+                        </div>
+                        <div class="contact-office__hours-row">
+                            <dt class="contact-office__hours-day">Сб-Вс</dt>
+                            <dd class="contact-office__hours-value">Выходные</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <p class="contact-office__map-row">
+                    <img class="contact-office__map-icon"
+                        src="img/icon-phone.svg"
+                        width="20"
+                        height="20"
+                        alt="">
+                    <a class="contact-office__map-phone" href="tel:+79128352345">
+                        +7&nbsp;(912)&nbsp;835&#8209;23&#8209;45
+                    </a>
+                </p>
+            </div>
+        </div>
     </div>
 </section>
